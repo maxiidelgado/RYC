@@ -1,0 +1,116 @@
+/* Estilo general para el cuerpo */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f8f9fa; /* Fondo claro para una mejor visibilidad */
+    color: #333; /* Color de texto más oscuro para contraste */
+    margin: 0;
+    padding: 0;
+}
+
+/* Container general con padding */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Título principal */
+h2 {
+    text-align: center;
+    color: #d9534f; /* Color rojo asociado con comida */
+    margin-bottom: 30px;
+}
+
+/* Grilla del menú - usar las clases de Bootstrap para grillas */
+.menu-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Estilo de los items del menú */
+.menu-item {
+    background-color: #fff; /* Fondo blanco para resaltar los elementos */
+    border-radius: 0.25rem;
+    overflow: hidden;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.menu-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Imagen del menú */
+.menu-item img {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes */
+    object-fit: cover; /* Hace que la imagen se recorte si es necesario */
+}
+
+/* Título de los items */
+.menu-item h3 {
+    font-size: 1.5rem;
+    margin: 15px;
+    text-align: center;
+    color: #5cb85c; /* Verde asociado con la comida saludable */
+}
+
+/* Descripción del menú */
+.menu-item p {
+    text-align: center;
+    font-size: 1.2rem;
+    color: #6c757d; /* Color gris suave para descripciones */
+    margin: 10px 0;
+}
+
+/* Botón de ordenar - Estilo mejorado */
+.btn-ordenar {
+    display: block;
+    width: 80%;
+    margin: 15px auto;
+    padding: 10px;
+    background-color: #d9534f; /* Color rojo para el botón */
+    color: #fff;
+    border: none;
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.btn-ordenar:hover {
+    background-color: #c9302c; /* Rojo más oscuro al pasar el mouse */
+    transform: scale(1.05); /* Efecto de escala al pasar el mouse */
+}
+
+/* Estilos del footer */
+footer {
+    background-color: #e67e22; /* Fondo oscuro para el footer */
+    color: #f8f9fa; /* Texto claro en el footer */
+    text-align: center;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+footer p {
+    margin: 0;
+}
+
+.card-img-top {
+    width: 100%;
+    height: 200px; /* Altura fija para las imágenes de la tarjeta */
+    object-fit: cover; /* Hace que la imagen se recorte si es necesario para llenar el espacio */
+}
+
+.btn-export{
+    background-color: black; /* Verde comida */
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+
+}
+.btn-export:hover {
+    background-color: #388e3c;
+}

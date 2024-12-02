@@ -1,0 +1,145 @@
+/* From Uiverse.io by mi-series */ 
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #f4f4f4;
+    font-family: 'Roboto', sans-serif;
+  }
+  
+  .container {
+    position: relative;
+    max-width: 500px;
+    width: 100%;
+    background: #FCEDDA;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+    background-color: #9496943d;
+  }
+  
+  .container header {
+    font-size: 1.2rem;
+    color: #000;
+    font-weight: 600;
+    text-align: center;
+  }
+  
+  .container .form {
+    margin-top: 15px;
+  }
+  
+  .form .input-box {
+    width: 100%;
+    margin-top: 10px;
+    box-sizing: border-box;
+  }
+  
+  .input-box label {
+    display: block;
+    margin-bottom: 5px;
+    color: #000;
+  }
+  
+  .form :where(.input-box input, .select-box) {
+    position: relative;
+    height: 35px;
+    width: 100%;  
+    outline: none;
+    font-size: 1rem;
+    color: #808080;
+    margin-top: 5px;
+    border: 1px solid #00770a;
+    border-radius: 6px;
+    padding: 0 15px;
+    background: #FCEDDA;
+    box-sizing: border-box;
+  }
+  
+  .input-box input:focus {
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.1);
+  }
+  
+  .form .column {
+    display: flex;
+    column-gap: 15px;
+  }
+  
+  .form .gender-box {
+    margin-top: 10px;
+  }
+  
+  .form :where(.gender-option, .gender) {
+    display: flex;
+    align-items: center;
+    column-gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .form .gender {
+    column-gap: 5px;
+  }
+  
+  .gender input {
+    accent-color: #4aee347c;
+  }
+  
+  .form :where(.gender input, .gender label) {
+    cursor: pointer;
+  }
+  
+  .gender label {
+    color: #000;
+  }
+  
+  .address :where(input, .select-box) {
+    margin-top: 10px;
+  }
+  
+  .select-box select {
+    height: 100%;
+    width: 100%;
+    outline: none;
+    border: none;
+    color: #808080;
+    font-size: 1rem;
+    background: #FCEDDA;
+  }
+  
+  .form button {
+    height: 40px;
+    width: 100%;
+    color: #000;
+    font-size: 1rem;
+    font-weight: 400;
+    margin-top: 15px;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    background: #EE4E34;
+  }
+  
+  .form button:hover {
+    background: #16a902;
+  }
+  
+
+  /* Estilo general para el contenedor de errores */
+.error-message {
+    color: #ff0000; /* Color rojo para los mensajes de error */
+    background-color: #f8d7da; /* Fondo claro para resaltar el error */
+    border: 1px solid #f5c6cb; /* Borde de color para el contenedor de error */
+    padding: 10px; /* Espaciado interno */
+    margin-bottom: 15px; /* Espacio debajo del contenedor de error */
+    border-radius: 5px; /* Bordes redondeados */
+    display: none; /* Ocultado por defecto */
+}
+
+/* Estilo para el contenedor de errores cuando se muestra */
+.error-message.error {
+    display: block; /* Muestra el contenedor cuando hay errores */
+}

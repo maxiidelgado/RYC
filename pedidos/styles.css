@@ -1,0 +1,19 @@
+/* styles.css */
+
+/* Estilo del cuerpo */
+body {
+    background-color: #f8f9fa; /* Fondo gris claro */
+}
+
+/* Estilo del contenedor */
+.container {
+    background-color: #ffffff; /* Blanco */
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilo de los encabezados */
+h2 {
+    color: #343a40; /* Gris oscuro */
+}
+

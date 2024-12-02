@@ -1,0 +1,66 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 600px; /* Ancho máximo del contenedor */
+    margin: 20px auto; /* Margen superior e inferior */
+    padding: 20px; /* Espaciado interno */
+    background-color: #fff; /* Fondo blanco */
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1); /* Sombra más difusa */
+    border-radius: 8px; /* Bordes redondeados */
+}
+
+h2 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+p {
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 20px; /* Espaciado inferior */
+}
+
+#map {
+    height: 400px; /* Altura del mapa */
+    width: 100%; /* Ancho completo */
+    border-radius: 8px; /* Bordes redondeados para el mapa */
+    margin-bottom: 15px; /* Espaciado inferior */
+}
+
+input[type="number"],
+input[type="text"] {
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    margin-top: 10px; /* Margen superior */
+    border: 1px solid #ccc; /* Borde gris claro */
+    border-radius: 4px; /* Bordes redondeados */
+}
+
+.btn-confirmar {
+    display: block; /* Bloque para ocupar el ancho completo */
+    width: 100%; /* Ancho completo */
+    padding: 10px; /* Espaciado interno */
+    background-color: #28a745; /* Color de fondo */
+    color: white; /* Color del texto */
+    border: none; /* Sin borde */
+    border-radius: 4px; /* Bordes redondeados */
+    cursor: pointer; /* Cursor de puntero */
+    font-size: 16px; /* Tamaño de fuente */
+    transition: background-color 0.3s; /* Transición suave para el hover */
+}
+
+.btn-confirmar:hover {
+    background-color: #218838; /* Color de fondo en hover */
+}
+
+.error {
+    color: red; /* Color de error */
+    text-align: center; /* Alinear al centro */
+    margin-top: 10px; /* Margen superior */
+}

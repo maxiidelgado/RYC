@@ -1,0 +1,51 @@
+/* Estilo general del formulario de inicio de sesión */
+body {
+    background-color: #f8f9fa; /* Fondo claro */
+    color: #343a40; /* Texto oscuro */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+.login-container {
+    background-color: #fff; /* Fondo blanco */
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
+}
+
+.login-container h2 {
+    color: #28a745; /* Verde relacionado con comida fresca */
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-container input {
+    margin-bottom: 15px;
+}
+
+.btn-primary {
+    background-color: #ff8c00; /* Naranja para botones */
+    border-color: #ff8c00;
+}
+
+.btn-primary:hover {
+    background-color: #e67e00;
+    border-color: #e67e00;
+}
+
+.register-link {
+    display: block;
+    text-align: center;
+    margin-top: 15px;
+    color: #28a745;
+}
+
+.error-message {
+    color: #dc3545;
+    text-align: center;
+    margin-bottom: 15px;
+}
