@@ -1,29 +1,21 @@
 <?php
-// Incluir archivo de configuración para conexión a la base de datos
-require '../database/db.php'; // Cambiar según la ubicación de tu archivo db.php
-
-// Iniciar sesión si no está iniciada ya
+require '../database/db.php'; 
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
 }
 
-// Verificar si el usuario está autenticado
 if (!isset($_SESSION['usuario_id'])) {
     die("Error: Debes iniciar sesión para realizar un pedido.");
 }
 
-// Verificar si el formulario fue enviado
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-    // Obtener los datos del formulario
     $menu_id = $_POST['menu_id'];
     $cantidad = $_POST['cantidad'];
     $direccion = $_POST['direccion'];
-    $metodo = $_POST['metodo_pago'];  // Corregido
-    $usuario_id = $_SESSION['usuario_id']; // Usar el ID del usuario almacenado en la sesión
+    $metodo = $_POST['metodo_pago'];  
+    $usuario_id = $_SESSION['usuario_id']; 
 
-    // Validar que todos los campos tengan valor
     if (!empty($menu_id) && !empty($cantidad) && !empty($direccion) && !empty($usuario_id)) {
-        // Obtener la información del menú
         $queryMenu = $pdo->prepare("SELECT * FROM Menu WHERE id = ?");
         $queryMenu->execute([$menu_id]);
         $menu = $queryMenu->fetch(PDO::FETCH_ASSOC);
@@ -32,18 +24,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             die("Error: Menú no encontrado.");
         }
 
-        // Calcular el total del pedido
         $total = $menu['precio'] * $cantidad;
 
-        // Insertar en la tabla Pedido
         $queryPedido = $pdo->prepare("INSERT INTO pedido (rela_usuario, direccion_entrega, fecha_pedido, estado, total, rela_metodo_pago) 
         VALUES (?, ?, NOW(), 'Pendiente', ?, ?)");
         $queryPedido->execute([$usuario_id, $direccion, $total, $metodo]);
         
-        // Obtener el ID del pedido recién insertado
         $pedido_id = $pdo->lastInsertId();
 
-        // Insertar en la tabla PedidoDetalle
         $queryDetalle = $pdo->prepare("INSERT INTO pedidodetalle (rela_pedido, rela_menu, cantidad) VALUES (?, ?, ?)");
         $queryDetalle->execute([$pedido_id, $menu_id, $cantidad]);
 

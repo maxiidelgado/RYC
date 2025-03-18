@@ -39,7 +39,7 @@
                     <a href="AsignarPerfil/vista_usuarios_perfiles.php">Asignar Perfil</a>
                 </div>
                 <div class="menu-item">
-                    <a href="perfil.php">Gestion De Perfil</a>
+                    <a href="perfil/perfil_vista.php">Gestion De Perfil</a>
                 </div>
                 <div class="menu-item">
                     <a href="GestionModulos/vista_modulos.php">Gestión de Módulos</a>
@@ -47,5 +47,11 @@
             </div>
         </div>
     </div>
+
+<footer>
+    <div class="container text-center">
+        <p>&copy; <?php echo date('Y'); ?> Mi Sistema de Delivery</p>
+    </div>
+</footer>
 </body>
 </html>

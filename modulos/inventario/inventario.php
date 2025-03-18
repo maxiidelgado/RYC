@@ -1,5 +1,5 @@
 <?php
-require '../../database/db_auditoria.php';
+
 require '../../database/db.php'; // Incluir archivo de conexión a la base de datos
 if (session_status() === PHP_SESSION_NONE) {
     session_start();
