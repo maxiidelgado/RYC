@@ -18,17 +18,14 @@ $menus = $query->fetchAll(PDO::FETCH_ASSOC);
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     
-    <!-- Google Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&family=Lobster&display=swap" rel="stylesheet">
 
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="css/styles.css"> <!-- Asegúrate de que la ruta sea correcta -->
 </head>
 <body>
 
 <main>
 
-    <!-- Sección para mostrar los menús -->
     <section id="menu" class="menu-section py-5">
         <div class="container">
             <h2 class="text-center mb-5" style="font-family: 'Lobster', cursive; color: #e67e22;">Menú del Día</h2>
@@ -61,7 +58,6 @@ $menus = $query->fetchAll(PDO::FETCH_ASSOC);
 
 </main>
 
-<!-- Footer -->
 <footer>
     <div class="container text-center">
         <p>&copy; <?php echo date('Y'); ?> Mi Sistema de Delivery</p>

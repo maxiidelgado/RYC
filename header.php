@@ -47,12 +47,16 @@ $modulos = $query->fetchAll(PDO::FETCH_ASSOC);
     <title>Mi Sistema de Delivery</title>
     <!-- Incluir Bootstrap CSS -->
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Incluir FontAwesome para los iconos -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/styles.css"> <!-- Asegúrate de tener este archivo -->
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #e67e22;"> <!-- Cambiar a fondo naranja -->
-            <a class="navbar-brand" href="#" style="color: #ffffff;">RyC</a> <!-- Texto en blanco -->
+            <a class="navbar-brand" href="#" style="color: #ffffff;">
+                <i class="fas fa-hamburger"></i> RyC <!-- Icono de hamburguesa -->
+            </a> <!-- Texto en blanco -->
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -60,15 +64,17 @@ $modulos = $query->fetchAll(PDO::FETCH_ASSOC);
                 <ul class="navbar-nav mr-auto">
                     <?php foreach ($modulos as $modulo): ?>
                         <li class="nav-item">
-                            <a class="nav-link" href="<?= ROOT_PATH . htmlspecialchars($modulo['url']); ?>" style="color: #ffffff;"> <!-- Texto en blanco -->
-                                <?php echo htmlspecialchars($modulo['nombre']); ?>
+                            <a class="nav-link" href="<?= ROOT_PATH . htmlspecialchars($modulo['url']); ?>" style="color: #ffffff;"> 
+                                <i class="fas fa-clipboard-list"></i> <?php echo htmlspecialchars($modulo['nombre']); ?>
                             </a>
                         </li>
                     <?php endforeach; ?>
                 </ul>
                 <ul class="navbar-nav">
                     <li class="nav-item">
-                        <a class="nav-link" href="<?= ROOT_PATH ?>logout.php" style="color: #ffffff;">Cerrar Sesión</a> <!-- Texto en blanco -->
+                        <a class="nav-link" href="<?= ROOT_PATH ?>logout.php" style="color: #ffffff;">
+                            <i class="fas fa-sign-out-alt"></i> Cerrar Sesión <!-- Icono de cierre de sesión -->
+                        </a> 
                     </li>
                 </ul>
             </div>
@@ -77,7 +83,6 @@ $modulos = $query->fetchAll(PDO::FETCH_ASSOC);
 
     <div class="container mt-5">
         <h1 class="text-center" style="color: #E9967A;">Bienvenido a Ricos Y Caseros</h1> 
-        <p class="text-center">Utiliza el menú de navegación para acceder a las diferentes secciones.</p>
     </div>
 
     <!-- Incluir Bootstrap JS y dependencias -->
